@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 18px;
+    background-color: aliceblue;
+}
+
+header{
+    margin: 1.5rem;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Tilt Prism', cursive;
+    font-size: 5rem;
+}
+
+.search-form{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 50%;
+    font-size: 1rem;
+    border-color:antiquewhite;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+
+.cocktail-photo{
+    min-width: 20%;
+    display: block;
+    border-radius: 10px;
+    border: 5px solid #ffff;
+    height: 200px;
+    object-fit: cover;
+}
