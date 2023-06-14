@@ -1,8 +1,6 @@
 
 
 
-
-//I need to install json?
 fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
   // take the response, which is a JSON-formatted **string**,
   // and parse it into an actual JavaScript **object**
@@ -68,5 +66,4 @@ searchForm.addEventListener('keyup', (e) =>{
     .catch(function (error){
         console.log(error.message)
     })
-
 })

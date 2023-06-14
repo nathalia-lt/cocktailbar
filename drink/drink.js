@@ -29,12 +29,12 @@ if (params.has('id')) {
 
 function drinkTemplate(drink, ingredients){
     return `
-    <div>
-        <article>
-            <img width="300px" class="cocktail-photo" src="${drink.strDrinkThumb}" alt="cocktail">
-                <h2>${drink.strDrink}</h2>
-                <p>${drink.strInstructions}</p>
-                <ul>${ingredients}</ul>
+    <div class="drink-container">
+    <img class="drink-photo" src="${drink.strDrinkThumb}" alt="cocktail">
+        <article class="drink-info">
+                <h2 class"drink-name">${drink.strDrink}</h2>
+                <p class="drink-desc" >${drink.strInstructions}</p>
+                <ul class="drink-ingredients">${ingredients}</ul>
         </article>
     </div>`
 }
