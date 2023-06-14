@@ -7,8 +7,8 @@
 body{
     font-family: 18px;
     background-color: #f0f8ff;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: auto;
 }
 
 header{
@@ -37,7 +37,7 @@ h2{
 }
 
 input{
-    width: 50%;
+    width: 40vw;
     font-size: 1rem;
     border-color:antiquewhite;
     border-radius: 5px;
@@ -67,7 +67,7 @@ input{
 .section-drinks{
     margin: auto;
     display: grid;
-    width: 100vw;
+    min-width: 100vw;
     height: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     /* grid-template-rows: 2fr 2fr 2fr 2fr; */
@@ -75,7 +75,9 @@ input{
     align-content: space-evenly;
 }
 
-/* .section-drink{
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-} */
+@media only screen and (max-width: 850px){
+    .section-drinks{
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+    }
+}

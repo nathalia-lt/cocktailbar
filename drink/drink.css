@@ -46,6 +46,7 @@ p{
 
 ul{
     padding: 1rem;
+    padding-top: 2rem;
 }
 
 .drink-photo{
@@ -54,6 +55,23 @@ ul{
     border: 5px solid #9cadbc;
     border-radius: 5px;
     margin: auto;
+}
+
+@media only screen and (max-width: 880px) {
+    p{
+        font-size: 1rem;
+        padding-top: 1rem;
+        text-align: left;
+    }
+
+    ul{
+        padding-top: 3rem;
+    }
+
+    .drink-photo{
+        min-width: 20vw;
+        height: 30vh;
+    }
 }
 
 
