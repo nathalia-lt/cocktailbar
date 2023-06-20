@@ -1,8 +1,26 @@
-console.log(window.location.href)
-console.log(window.location.favorites)
-const params = new URLSearchParams(window.location.favorites)
-console.log(params)
-console.log(params.has('id'))
-console.log(params.get('id'))
+import { setToStorage, getFromStorage } from "../services/localStorage.js";
 
-fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
+
+
+function favoritesToDisplay(){
+    // pegamos o objeto do local storage
+    const storageLikes = getFromStorage('cocktails-app')
+    console.log(storageLikes)
+    // pegamos o elemento do html
+    const favContainer = document.getElementById('fav-container')
+    Object.values(storageLikes).forEach(drink => {
+        favContainer.innerHTML +=favoriteTemplate(drink)
+    });
+}
+
+function favoriteTemplate(drink){
+    return `
+    <div class='fav-drink'>
+        <img width="200px" src='${drink.url}' />
+        <p>${drink.name}</p>
+    </div>
+    `
+}
+
+
+favoritesToDisplay()
